@@ -25,7 +25,7 @@ class ContactManagerComp extends React.Component{
     handleAddress=(e)=>{
         this.setState({ipUser:e.target.value})
     }
-    
+
     // instead of making all different functions we can do it with one function using keys
     render(){
         return(
