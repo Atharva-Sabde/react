@@ -3,8 +3,8 @@ import React  from "react";
 class ContactManagerComp extends React.Component{
     constructor(props){
         super(props)
-        this.state{
-            contactinfo:[]
+        this.state={
+            contactinfo:this.props.data
         }
     }
 
@@ -30,6 +30,7 @@ class ContactManagerComp extends React.Component{
     render(){
         return(
             <div>
+                <h1> testing </h1>
                 <form>
                     UserName: <input type='text' onChange={
                     (e)=>this.handleChange(e)
@@ -43,9 +44,12 @@ class ContactManagerComp extends React.Component{
                     Address: <input type='text' onChange={
                     (e)=>this.handleChange(e)
                     }></input>
+                    <button onClick={(e)=>this.handleContact(e)}>New Contact</button>
                 </form>
             </div>
             
         )
     }
 }
+
+export default ContactManagerComp;
