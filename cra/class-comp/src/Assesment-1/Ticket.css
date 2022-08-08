@@ -1,0 +1,33 @@
+body{
+    /* background-color:rgb(255, 226, 190); */
+    /* background-image: url('https://patternico.com/#Z185ajALnINkaXpd'); */
+    background-image: url(./tile_background\ \(1\).png);
+    padding-top:1%;
+    margin: 0px 120px 0px 120px;
+}
+.header{
+    padding-bottom:1px;
+    color: antiquewhite;
+    /* background-color: #bc56ff; */
+    background-color:#0096bb;
+    background-image:url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+}
+.footer{
+    text-align: center;
+}
+
+.card{
+    margin: 10px;
+    padding: 20px;
+}
+.p1{
+    background-color: red;
+}
+.p2{
+    background-color: orange;
+}
+.p3{
+    background-color: green;
+}
+
+

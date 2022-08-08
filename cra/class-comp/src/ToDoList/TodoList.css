@@ -1,6 +1,6 @@
 body{
     background-color:rgb(255, 226, 190);
-
+    background-image: url(./tile_background.png);
     padding-top:1%;
     margin: 0px 120px 0px 120px;
 }
@@ -8,25 +8,33 @@ body{
     color:rgb(255, 217, 170);
     text-align: center;
     width: 280px;
-    margin-top: 50px;
-    padding-bottom: 25px;
+    margin-top: 20px;
+    padding-bottom: 10px;
     background-color:hsl(212, 100%, 21%);
     background-image:url("https://www.transparenttextures.com/patterns/cubes.png");
 }
 .card{
     color:rgb(255, 255, 255);
-    background-color:#bc56ff;
+    background-color:#0096bb;
+    /* background-color:#bc56ff; */
     /* background-color:#6a49ff; */
     /* background-image:url("https://www.transparenttextures.com/patterns/brushed-alum.png"); */
     background-image:url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
-    margin: 30px 20px;
+    margin: 20px 10px;
     padding:10px;
     border-radius: 10px;
 }
-
+.completed-card{
+    color: rgb(0, 255, 0);
+}
+.trash-card{
+    color:red;
+}
 .Header{
+    padding-bottom:1px;
     color: antiquewhite;
-    background-color: #bc56ff;
+    /* background-color: #bc56ff; */
+    background-color:#0096bb;
     background-image:url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
 }
 
@@ -45,8 +53,13 @@ body{
 
 .btn{
     margin-left:  5px;
-    
+    background-color:hsl(212, 100%, 21%);
+    /* background-image:url("https://www.transparenttextures.com/patterns/cubes.png"); */
+    /* background-color:bisque; */
 }
 
+.footer{
+    text-align: center;
+}
 
 

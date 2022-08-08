@@ -10,7 +10,7 @@ class Trash extends React.Component {
         return (
             <div className="trash-container container" >
                 {console.log("bin render")}
-                <h4>Trash </h4>
+                <h4> Trash </h4>
                 {
                     deletedTask.map((item) => (
                         <div className="trash-card card">

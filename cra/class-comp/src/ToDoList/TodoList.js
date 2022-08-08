@@ -32,10 +32,10 @@ class TodoList extends React.Component {
     }
 
     changeCompletionStatus = (itemid) => {
-        const temp = [...this.state.tasks]
-        const obj = temp.find((item) => item.id === itemid)
-        obj.completion = !obj.completion
-        this.setState({ tasks: temp })
+        const temp = [...this.state.tasks]  // taking and spreading the props from DB
+        const obj = temp.find((item) => item.id === itemid) //finding the object from id
+        obj.completion = !obj.completion  // toggling the object state opposite
+        this.setState({ tasks: temp })  //setting the new state 
     }
     changeDeletionStatus = (itemid) => {
         const temp = [...this.state.tasks]
@@ -55,25 +55,35 @@ class TodoList extends React.Component {
                 <div class="container">
                     <div class="row-gap">
                         <div className="col-gap">
-                            <PendingTask pendingTask={this.getPendingItems()} changeCompletion={this.changeCompletionStatus}></PendingTask>
+                            <PendingTask
+                                pendingTask={this.getPendingItems()}
+                                changeCompletion={this.changeCompletionStatus}
+                            />
                         </div>
                         <div className="col-gap">
-                            <CompleteTask completedTask={this.getCompletedItems()} changeCompletion={this.changeCompletionStatus} deleteTask={this.deleteTask}></CompleteTask>
+                            <CompleteTask
+                                completedTask={this.getCompletedItems()}
+                                changeCompletion={this.changeCompletionStatus}
+                                changeDeletion={this.changeDeletionStatus}
+                            />
                         </div>
                         <div className="col-gap">
-                            <Trash deletedTask={this.getDeletedItems()}></Trash>
+                            <Trash
+                                deletedTask={this.deleteTask}
+                                changeDeletion={this.changeDeletionStatus}
+                            />
                         </div>
                     </div>
                 </div>
 
-                <div className="Container">
+                <div className="footer">
+                    <hr></hr>
+                    <p> made with ❤️ by <a href="https://github.com/Atharva-Sabde">Atharva Sabde </a> </p>
                 </div>
 
-            </div>
+            </div >
         )
     }
-
-
 
 }
 
