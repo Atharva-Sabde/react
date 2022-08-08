@@ -5,7 +5,7 @@ import ContactDetails from "./ContactReactManager/ContactDetails"
 // import TodoList from './ToDoList/TodoList';
 // import data from './ToDoList/ToDoDB'
 
-import Ticket from './Assesment-1/TicketMain'
+import Ticket from './Assesment-1/Ticket'
 import data from './Assesment-1/db'
 
 function App(){

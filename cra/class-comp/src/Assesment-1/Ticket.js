@@ -15,12 +15,14 @@ class Ticket extends React.Component {
                 : "p3";
     }
     changeResolveStatus = (itemId) => {
-        // this.setState({tickets:!this.state.})
+        const result = this.state.tickets.find((item) => item.ticketID === itemId)
+        result= result.status;
+        this.setState({ contactinfo: result })
     }
     toggleUpdate = () => {
         this.setState({ update: !this.state.update })
     }
-    
+
     render() {
         const { data } = this.props;
         return (
@@ -29,10 +31,6 @@ class Ticket extends React.Component {
                     <h3 align='center'>---------- Ticket Raising App---------</h3>
                     <p align='center'>---------  Quickly analyse and prioritize your job  ---------</p>
                 </div>
-                {/* <div className="ticket-container">
-                    <p> testing div</p>
-                </div> */}
-
 
                 <div className="ticket-container container">
                     <h4> All active Tickets</h4>
@@ -51,8 +49,6 @@ class Ticket extends React.Component {
                                     </div>
                                 </div>
                             </div>
-
-
                         ))
                     }
 
@@ -60,6 +56,7 @@ class Ticket extends React.Component {
 
                 <div className="footer">
                     <hr></hr>
+                    <p> Ticket Making app </p>
                     <p> <b>made with ❤️ by <a href="https://github.com/Atharva-Sabde">Atharva Sabde </a> </b> </p>
                 </div>
             </>
