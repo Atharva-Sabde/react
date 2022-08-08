@@ -8,21 +8,18 @@ class Ticket extends React.Component {
             tickets: this.props.data    // assigning the data to state.
         }
     }
-    getPriorityClass = (priority) => {
+    getPriorityClass = (priority) => {   // sets the CSS className for color change
         // const result= priority=="1"? "p1" : 
         return priority === 1 ? "p1"
             : priority === 2 ? "p2"
-                : "p3";
+            : "p3";
     }
-    changeResolveStatus = (itemId) => {
+    changeResolveStatus = (itemId) => {   // changing the status of ticket
         const result = this.state.tickets.find((item) => item.ticketID === itemId)
         result= result.status;
-        this.setState({ contactinfo: result })
+        this.setState({  })
     }
-    toggleUpdate = () => {
-        this.setState({ update: !this.state.update })
-    }
-
+   
     render() {
         const { data } = this.props;
         return (
