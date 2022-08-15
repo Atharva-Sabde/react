@@ -12,14 +12,13 @@ class Ticket extends React.Component {
         // const result= priority=="1"? "p1" : 
         return priority === 1 ? "p1"
             : priority === 2 ? "p2"
-            : "p3";
+                : "p3";
     }
     changeResolveStatus = (itemId) => {   // changing the status of ticket
         const result = this.state.tickets.find((item) => item.ticketID === itemId)
-        result= result.status;
-        this.setState({  })
+
     }
-   
+
     render() {
         const { data } = this.props;
         return (
@@ -29,25 +28,32 @@ class Ticket extends React.Component {
                     <p align='center'>---------  Quickly analyse and prioritize your job  ---------</p>
                 </div>
 
-                <div className="ticket-container container">
-                    <h4> All active Tickets</h4>
-                    {
-                        data.map((item) => (
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-md-4">
-                                        <div className={`card ${this.getPriorityClass(item.priority)}`}>
-                                            <h5>{item.description}</h5>
-                                            <h6>ID: {item.ticketID} &nbsp;&nbsp;  Time: {item.timestamp}</h6>
-                                            <p>Priority: {item.priority} &nbsp;&nbsp; open: {item.status}  </p>
-                                            <button className="btn btn-primary" onClick={() => this.changeResolveStatus(item.tickedID)}> Resolve</button>
-                                            {/* {console.log("data recieved")} */}
-                                        </div>
+
+
+                <h4> All active Tickets</h4>
+                <div className="container ticket-container ">
+                    <div className="row justify-content-cent">
+                        {
+                            data.map((item) => (
+
+                                <div className="col-md-4">
+                                    <div className={`card ${this.getPriorityClass(item.priority)}`}>
+                                        <h5>{item.description}</h5>
+                                        <span> <i class="fa-light fa-message-check"></i></span>
+
+                                        <h6>ID: {item.ticketID} &nbsp;&nbsp;  Time: {item.timestamp}</h6>
+                                        <p>Priority: {item.priority} &nbsp;&nbsp; open: {item.status}  </p>
+                                        <button className="btn btn-primary" onClick={() => this.changeResolveStatus(item.tickedID)}>
+                                            Resolve {"        "}
+                                            <i class="fas fa-thin fa-check" style={{ marginLeft: '.9rem' }} >  </i>
+                                        </button>
+                                        {/* {console.log("data recieved")} */}
                                     </div>
                                 </div>
-                            </div>
-                        ))
-                    }
+
+                            ))
+                        }
+                    </div>
 
                 </div>
 

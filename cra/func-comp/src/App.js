@@ -1,13 +1,16 @@
 import "./App.css"
-import SimpleProductCatalogue from './SimpProdCat/SimpleProductCatalogue';
+// import SimpleProductCatalogue from './SimpProdCat/SimpleProductCatalogue';
 
+import Simplestate from "./StateFunctional/simple-state";
+import ContextProvider from "./Context-api/ContextProvider";
 
 function App() {
   return (
-
     <>
-      <SimpleProductCatalogue></SimpleProductCatalogue>
+       {/* <Simplestate></Simplestate> */}
+       <ContextProvider/>
     </>
+
   );
 }
 
